@@ -285,7 +285,7 @@ export default {
       if (!res) {
         return
       }
-      const overrides = { value: this.itemPriceWei, gasLimit: 300000 }
+      const overrides = { value: this.itemPriceWei, gasLimit: 200000 }
 
       const contractGuttercatss = new ethers.Contract(
         CONTRACT_ADDR_GUTTERCATS,
