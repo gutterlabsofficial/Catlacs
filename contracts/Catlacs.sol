@@ -10,8 +10,10 @@ import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 contract Catlacs is ERC721Enumerable, Ownable {
 	using Strings for uint256;
 
-	string private _baseTokenURI = "https://xxxxyyyyyyyyyxxxxx/metadata/1";
-	string private _contractURI = "https://xxxxxxyyyyyyyyxxxxx/contract_uri";
+	string private _baseTokenURI =
+		"https://raw.githubusercontent.com/nftinvesting/Catlacs/master/other/";
+	string private _contractURI =
+		"https://raw.githubusercontent.com/nftinvesting/Catlacs/master/other/contract_uri.json";
 
 	uint256 public itemPrice = 70000000000000000; // 0.07 ETH
 	bool public isSaleActive = false;
