@@ -1,5 +1,11 @@
 export const ERC721_ABI = [
-  { inputs: [], stateMutability: 'nonpayable', type: 'constructor' },
+  {
+    inputs: [
+      { internalType: 'address', name: '_catsNFTAddress', type: 'address' },
+    ],
+    stateMutability: 'nonpayable',
+    type: 'constructor',
+  },
   {
     anonymous: false,
     inputs: [
@@ -167,6 +173,13 @@ export const ERC721_ABI = [
     type: 'function',
   },
   {
+    inputs: [],
+    name: 'gutterCatNFTAddress',
+    outputs: [{ internalType: 'contract IERC1155', name: '', type: 'address' }],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
     inputs: [
       { internalType: 'address', name: 'owner', type: 'address' },
       { internalType: 'address', name: 'operator', type: 'address' },
@@ -187,15 +200,8 @@ export const ERC721_ABI = [
     type: 'function',
   },
   {
-    inputs: [{ internalType: 'address', name: '_to', type: 'address' }],
-    name: 'mintTo',
-    outputs: [],
-    stateMutability: 'nonpayable',
-    type: 'function',
-  },
-  {
-    inputs: [{ internalType: 'uint256', name: '_howMany', type: 'uint256' }],
-    name: 'multipleAdminMint',
+    inputs: [{ internalType: 'uint256', name: '_catID', type: 'uint256' }],
+    name: 'mint',
     outputs: [],
     stateMutability: 'nonpayable',
     type: 'function',
@@ -218,13 +224,6 @@ export const ERC721_ABI = [
     inputs: [{ internalType: 'uint256', name: 'tokenId', type: 'uint256' }],
     name: 'ownerOf',
     outputs: [{ internalType: 'address', name: '', type: 'address' }],
-    stateMutability: 'view',
-    type: 'function',
-  },
-  {
-    inputs: [],
-    name: 'purchasedTokens',
-    outputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
     stateMutability: 'view',
     type: 'function',
   },
@@ -332,13 +331,6 @@ export const ERC721_ABI = [
   {
     inputs: [],
     name: 'totalSupply',
-    outputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
-    stateMutability: 'view',
-    type: 'function',
-  },
-  {
-    inputs: [],
-    name: 'totalTokenToMint',
     outputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
     stateMutability: 'view',
     type: 'function',

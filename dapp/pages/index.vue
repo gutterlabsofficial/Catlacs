@@ -5,7 +5,12 @@
         <div v-if="!txHash" style="text-align: center">
           <p class="mt-5">
             <img
-              src="/rat.jpeg"
+              src="https://github.com/nftinvesting/Catlacs/blob/master/other/purple.gif?raw=true"
+              style="max-width: 250px; text-align: center"
+              alt="catlac purple default image"
+            />
+            <img
+              src="https://github.com/nftinvesting/Catlacs/blob/master/other/red.gif?raw=true"
               style="max-width: 250px; text-align: center"
               alt="gutter rat default image"
             />
@@ -23,7 +28,7 @@
             color="red darken-1"
             @click="dialogConfirmation = true"
           >
-            CLAIM YOUR RAT
+            CLAIM YOUR CAR
           </v-btn>
 
           <p class="mt-5">
@@ -36,7 +41,7 @@
           </p>
 
           <v-btn color="grey darken-4" @click="dialogVerifyClaimedRat = true"
-            >rat mint checker</v-btn
+            >car mint checker</v-btn
           >
         </div>
 
@@ -51,12 +56,10 @@
           </p>
           <br />
           <p style="text-align: center">
-            In a few minutes, your Gutter Rat will show up in Opensea
+            In a few minutes, your Car will show up in Opensea
             <span style="font-weight: bold">
-              <a
-                target="_blank"
-                href="https://opensea.io/collections/gutterrats"
-                >opensea.io/collections/gutterrats</a
+              <a target="_blank" href="https://opensea.io/collections/catlacs"
+                >opensea.io/collections/catlacs</a
               ></span
             >
           </p>
@@ -178,6 +181,7 @@ import {
   CONTRACT_ADDR_GUTTERCATS,
 } from '../constants'
 import { ERC1155_ABI } from '../erc1155_abi'
+import { ERC721_ABI } from '../erc721_abi'
 
 export default {
   auth: false,
@@ -237,11 +241,10 @@ export default {
         const exists = await this.contract.exists(this.verifyCatID)
 
         if (exists) {
-          this.errorText =
-            'The Gutter Rat for this Gutter Cat ID was already claimed.'
+          this.errorText = 'The Car for this Gutter Cat ID was already claimed.'
           this.dialogError = true
         } else {
-          this.$toast.info('This Gutter Rat has not yet been claimed')
+          this.$toast.info('This Car has not yet been claimed')
         }
 
         return
@@ -273,7 +276,7 @@ export default {
       this.signer = this.ethers.getSigner()
       this.contract = new ethers.Contract(
         CONTRACT_ADDR,
-        ERC1155_ABI,
+        ERC721_ABI,
         this.signer
       )
 
@@ -317,7 +320,7 @@ export default {
     loadContract() {
       this.contract = new ethers.Contract(
         CONTRACT_ADDR,
-        ERC1155_ABI,
+        ERC721_ABI,
         this.ethers
       )
     },
