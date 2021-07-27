@@ -10,7 +10,9 @@
 		"testGas": "REPORT_GAS=true npx hardhat test --network ganache",
 		"prettier": "prettier --write 'contracts/**/*.sol'",
 		"deploy:rinkeby": "NETWORK=rinkeby npx hardhat run --network rinkeby scripts/deploy.js",
-		"deploy:mainnet": "NETWORK=mainnet npx hardhat run --network mainnet scripts/deploy.js"
+		"deploy:mainnet": "NETWORK=mainnet npx hardhat run --network mainnet scripts/deploy.js",
+		"deploy:matic_test": "NETWORK=matic_test npx hardhat run --network matic_test scripts/deploy.js",
+		"deploy:matic": "NETWORK=matic npx hardhat run --network matic scripts/deploy.js"
 	},
 	"author": "Andrei",
 	"license": "GPL-2.0",
