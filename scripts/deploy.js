@@ -32,7 +32,12 @@ async function main() {
 		"ETH"
 	)
 
-	const deployed = await NFTContract.deploy()
+	let catContractAddress = "0xEdB61f74B0d09B2558F1eeb79B247c1F363Ae452" //mainnet
+	if (network === "rinkeby") {
+		catContractAddress = "0xE854B7D7d0fb1C4d5775795773Dc8F7fC85C2Aa2" //rinkeby
+	}
+
+	const deployed = await NFTContract.deploy(catContractAddress)
 
 	let dep = await deployed.deployed()
 
@@ -42,7 +47,7 @@ async function main() {
 
 	await hre.run("verify:verify", {
 		address: dep.address,
-		constructorArguments: [],
+		constructorArguments: [catContractAddress],
 	})
 }
 

@@ -1,0 +1,277 @@
+@import 'reset';
+
+.application {
+  font-family: 'Special Elite', cursive !important;
+  color: #ad6bf3;
+}
+
+#app,
+#app div,
+#app a,
+#app span,
+#app table,
+#app thead,
+#app tbody,
+#app tr,
+#app td {
+  font-family: 'Special Elite', cursive !important;
+  color: #ddd;
+  font-size: 1.01em;
+  /* Location of the image */
+  //   background-image: url(/cat_saloon.jpeg);
+
+  //   /* Background image is centered vertically and horizontally at all times */
+  //   background-position: center center;
+
+  //   /* Background image doesn’t tile */
+  //   background-repeat: no-repeat;
+
+  //   /* Background image is fixed in the viewport so that it doesn’t move when
+  // the content’s height is greater than the image’s height */
+  //   background-attachment: fixed;
+
+  //   /* This is what makes the background image rescale based
+  // on the container’s size */
+  //   background-size: cover;
+
+  /* Set a background color that will be displayed
+while the background image is loading */
+}
+
+.toasted {
+  font-family: 'Bangers', cursive !important;
+}
+
+.redtext {
+  font-family: 'Bangers', cursive !important;
+}
+
+.v-card {
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.4s;
+}
+
+.page-enter,
+.page-leave-active {
+  opacity: 0;
+}
+
+.theme--light.v-application {
+  background: #fff !important;
+}
+
+.navigation-drawer__border {
+  width: 10px !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+tr:hover {
+  background-color: transparent !important;
+}
+
+.v-application a {
+  color: #cfd8dc;
+}
+
+[v-cloak] > * {
+  display: none;
+}
+
+[v-cloak]::before {
+  content: ' ';
+}
+
+// App Nan
+.app-nav {
+  position: static !important;
+  height: auto !important;
+  flex: unset !important;
+
+  .v-toolbar {
+    flex: unset !important;
+  }
+
+  .v-toolbar__content {
+    margin-top: 15px;
+    height: auto !important;
+  }
+
+  @media (max-width: 767px) {
+    .v-toolbar__content {
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .v-toolbar__title {
+        margin-bottom: 15px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+
+// Search Form
+.search-form {
+  width: 100%;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__wrap {
+    max-width: 900px;
+    width: 100%;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (max-width: 767px) {
+    &__row {
+      flex-wrap: wrap;
+
+      .form-input {
+        width: 100%;
+        font-size: 2.35vw;
+      }
+    }
+  }
+}
+.model-block {
+  padding: 0 15px;
+
+  .heading-wrap {
+    margin: 20px;
+  }
+
+  @media (max-width: 767px) {
+    .v-card__text {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .v-list-item {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .heading-wrap {
+      margin: 0;
+
+      .title {
+        margin-bottom: 6px;
+      }
+
+      .row {
+        margin: 0;
+      }
+    }
+  }
+}
+
+// 404 error
+.error-template {
+  width: 100%;
+  padding: 60px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+  a {
+    margin-top: 15px;
+  }
+}
+
+// Metamas Info
+.metamask-info-template {
+  padding-bottom: 60px;
+
+  &__row {
+    width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+  }
+
+  @media (max-width: 480px) {
+    .v-card__title {
+      font-size: 14px;
+    }
+    .v-card__text {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+.countdown-row {
+  &__logo {
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__title {
+    font-size: 2.125rem;
+    font-weight: 400;
+    line-height: 2.5rem;
+    letter-spacing: 0.0073529412em !important;
+    font-family: 'Roboto', sans-serif !important;
+  }
+  .countdown-number {
+    font-size: 3em;
+  }
+  @media (max-width: 660px) {
+    &__logo {
+      margin: 50px 15px;
+      margin-top: 20px;
+    }
+    .display-1 {
+      font-size: 1.6rem !important;
+    }
+    &__title {
+      font-size: 1.6rem;
+    }
+    .timer-row {
+      justify-content: center;
+      .col {
+        width: 40%;
+        min-width: 40%;
+      }
+    }
+    .countdown-number {
+      font-size: 2em;
+    }
+  }
+}
+
+// Global
+@media (max-width: 420px) {
+  .v-card__subtitle,
+  .v-card__text {
+    font-size: 0.675rem !important;
+  }
+}
+
+.inner {
+  .v-application--wrap {
+    min-height: unset;
+  }
+}

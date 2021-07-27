@@ -2,43 +2,37 @@
 pragma solidity 0.8.4;
 
 import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
+import "@openzeppelin/contracts/token/ERC1155/IERC1155.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 
-contract Catlacs is ERC721Enumerable, Ownable {
+contract Catlacs is ERC721Enumerable, Ownable, ReentrancyGuard {
 	using Strings for uint256;
+
+	IERC1155 public gutterCatNFTAddress;
 
 	string private _baseTokenURI =
 		"https://raw.githubusercontent.com/nftinvesting/Catlacs/master/other/";
 	string private _contractURI =
 		"https://raw.githubusercontent.com/nftinvesting/Catlacs/master/other/contract_uri.json";
 
-	uint256 public constant totalTokenToMint = 3000;
-	uint256 public purchasedTokens = 0;
-
 	event Action(uint256 nftID, uint256 value, uint256 actionID, string payload);
 
-	constructor() ERC721("Catlacs", "CATLACS") {}
-
-	//this...
-	function adminMint(uint256 _howMany) public onlyOwner {
-		require(_howMany > 0, "minimum 1 token");
-		require(
-			_howMany <= totalTokenToMint - purchasedTokens,
-			"amount is greater than the token available"
-		);
-		for (uint256 i = 0; i < _howMany; i++) {
-			_mintToken(_msgSender());
-		}
+	constructor(address _catsNFTAddress) ERC721("Catlacs", "CATLACS") {
+		gutterCatNFTAddress = IERC1155(_catsNFTAddress);
 	}
 
-	//internal mint function
-	function _mintToken(address _to) private {
-		purchasedTokens++;
-		require(!_exists(purchasedTokens), "Mint: Token already exist.");
-		_safeMint(_to, purchasedTokens);
+	function mint(uint256 _catID) external nonReentrant {
+		//verify ownership
+		require(
+			gutterCatNFTAddress.balanceOf(msg.sender, _catID) > 0,
+			"you have to own this cat with this id"
+		);
+		require(!_exists(_catID), "Mint: Token already exist.");
+		_safeMint(msg.sender, _catID);
 	}
 
 	//a custom action that supports anything.

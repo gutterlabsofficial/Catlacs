@@ -1,9 +1,9 @@
 {
 	"description": "The Cat'lacs El da Gato is in a class all its own. This full-body beauty was built for driving slow down the boulevarde, with the top laid back, the sun in your face, and the breeze in your fur.",
 	"external_url": "https://guttercatgang.com/",
-	"image": "https://raw.githubusercontent.com/nftinvesting/Catlacs/master/other/red.png",
+	"image": "https://raw.githubusercontent.com/nftinvesting/Catlacs/master/other/purple.png",
 	"name": "Cat'lacs El da Gato",
-	"animation_url": "https://github.com/nftinvesting/Catlacs/blob/master/other/red.gif?raw=true",
+	"animation_url": "https://github.com/nftinvesting/Catlacs/blob/master/other/purple.gif?raw=true",
 	"attributes": [
 		{
 			"trait_type": "Paint",

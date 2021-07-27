@@ -75,6 +75,6 @@ module.exports = {
 		timeout: 25000,
 	},
 	etherscan: {
-		apiKey: process.env.MATIC_API,
+		apiKey: process.env.ETHERSCAN_KEY,
 	},
 }
