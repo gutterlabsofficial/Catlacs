@@ -1,0 +1,29 @@
+{
+	"description": "The Cat'lacs El da Gato is in a class all its own. This full-body beauty was built for driving slow down the boulevarde, with the top laid back, the sun in your face, and the breeze in your fur.",
+	"external_url": "https://guttercatgang.com/",
+	"image": "https://raw.githubusercontent.com/AndreiD/Playground/master/nfts_sample/images/1.jpg",
+	"name": "test 1",
+	"animation_url": "https://raw.githubusercoxxxxxxxtf/1.gltf",
+	"attributes": [
+		{
+			"trait_type": "Paint",
+			"value": "Purple"
+		},
+		{
+			"trait_type": "Interior",
+			"value": "OG"
+		},
+		{
+			"trait_type": "Hood Ornament",
+			"value": "Gold Cat Bust"
+		},
+		{
+			"trait_type": "Underglow",
+			"value": "Purple"
+		},
+		{
+			"trait_type": "License Plate",
+			"value": "GCG50"
+		}
+	]
+}
