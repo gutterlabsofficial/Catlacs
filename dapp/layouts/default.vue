@@ -1,5 +1,5 @@
 <template>
-  <v-app dark style="background-color: #412b49">
+  <v-app dark style="background-color: #9e9ca6">
     <v-app-bar
       class="app-nav"
       color="transparent"

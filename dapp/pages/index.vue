@@ -9,6 +9,7 @@
               style="max-width: 250px; text-align: center"
               alt="catlac purple default image"
             />
+            <br />
             <img
               src="https://github.com/nftinvesting/Catlacs/blob/master/other/red.gif?raw=true"
               style="max-width: 250px; text-align: center"
@@ -25,7 +26,7 @@
           <v-btn
             x-large
             style="max-width: 190px"
-            color="red darken-1"
+            color="blue darken-1"
             @click="dialogConfirmation = true"
           >
             CLAIM YOUR CAR

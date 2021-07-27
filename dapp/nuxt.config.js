@@ -15,7 +15,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: 'Gutter Cat Gang Pets',
+    titleTemplate: "Gutter Cat Gang Cat'lacs",
     title: 'Gutter Cat Gang Pets',
     meta: [
       { charset: 'utf-8' },
