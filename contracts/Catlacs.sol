@@ -23,7 +23,7 @@ contract Catlacs is ERC721Enumerable, Ownable {
 
 	event Action(uint256 petID, uint256 value, uint256 actionID, string payload);
 
-	constructor() ERC721("Crypto Cannabis Club", "CCC") {}
+	constructor() ERC721("Catlacs", "CATLACS") {}
 
 	//core of the contract
 	function purchaseToken(uint256 _howMany) public payable {
