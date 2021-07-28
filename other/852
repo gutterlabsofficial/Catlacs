@@ -1,29 +1,29 @@
 {
-	"description": "The Cat'lacs Escat'lade is a full-size luxury Cyber Sport Utility Vehicle, capable of mobbing down the alleyways, racing on the freeways, and looking good always.",
-	"external_url": "https://guttercatgang.com/",
-	"name": "Cat'lacs Escat'lade",
-	"image": "https://raw.githubusercontent.com/nftinvesting/Catlacs/master/other/red.png",
-	"animation_url": "https://github.com/nftinvesting/Catlacs/blob/master/other/red.gif?raw=true",
-	"attributes": [
-		{
-			"trait_type": "Paint",
-			"value": "Candy Red"
-		},
-		{
-			"trait_type": "Interior",
-			"value": "Platinum Pack"
-		},
-		{
-			"trait_type": "Hood Ornament",
-			"value": "GCG Shield"
-		},
-		{
-			"trait_type": "Rims",
-			"value": "Spokes"
-		},
-		{
-			"trait_type": "License Plate",
-			"value": "GCG50"
-		}
-	]
+ "description": "The Cat'lacs Escat'lade is a full-size luxury Cyber Sport Utility Vehicle, capable of mobbing down the alleyways, racing on the freeways, and looking good always.",
+ "external_url": "https://guttercatgang.com",
+ "image": "ipfs://QmPzvX9NW37CZUygLQ5nhLMnnWJ8soaTDco1s58Nqmq1rN",
+ "animation_url": "ipfs://QmX2Frb1NAZgdMxMYcytvgEo3oKEviGTgqtmRj4ZgSsjw3",
+ "name": "Cat'lacs Escat'lade #852",
+ "attributes": [
+  {
+   "trait_type": "Paint",
+   "value": "Candy Red"
+  },
+  {
+   "trait_type": "Interior",
+   "value": "Platinum Pack"
+  },
+  {
+   "trait_type": "Hood Ornament",
+   "value": "GCG Shield"
+  },
+  {
+   "trait_type": "Rims",
+   "value": "Spokes"
+  },
+  {
+   "trait_type": "License Plate",
+   "value": "GCG50"
+  }
+ ]
 }
