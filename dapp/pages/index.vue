@@ -59,8 +59,10 @@
           <p style="text-align: center">
             In a few minutes, your Car will show up in Opensea
             <span style="font-weight: bold">
-              <a target="_blank" href="https://opensea.io/collections/catlacs"
-                >opensea.io/collections/catlacs</a
+              <a
+                target="_blank"
+                href="https://opensea.io/collection/guttercatlacs"
+                >opensea.io/collections/guttercatlacs</a
               ></span
             >
           </p>

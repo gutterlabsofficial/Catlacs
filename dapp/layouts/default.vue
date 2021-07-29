@@ -10,7 +10,7 @@
       <v-toolbar-title>
         <nuxt-link style="text-decoration: none" to="/">
           <img
-            src="/logo.png"
+            src="/guttercatlogo.gif"
             class="logo-img"
             style="height: 150px"
             alt="guttercatgang logo"
